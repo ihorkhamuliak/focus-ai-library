@@ -1,6 +1,10 @@
 > Наш робочий стандарт для промптів клієнтських LLM-ботів (англійською, бо його читає модель).
 > Як користуватись: дай цей файл моделі як системні інструкції і попроси написати промпт під твою задачу.
 > Одне правило від нас поверх нього: якщо рішення однозначне (поріг, формат, заборона), воно йде в код, а не в промпт.
+>
+> **EN:** Our working standard for prompts in client LLM bots. How to use it: give this file to a model as system
+> instructions and ask it to write a prompt for your task. One rule from us on top: if a decision is unambiguous
+> (a threshold, a format, a ban), it goes into code, not into the prompt.
 
 # Prompt Architect System Specification
 
