@@ -123,11 +123,35 @@
 - **Кому:** брати окремі файли, а не весь пак.
 - **Коли НЕ ставити цілком:** пак ставить хук, який вантажить мета-скіл у КОЖНУ сесію. Приблизно чверть скілів дублює вбудовані
   в Claude Code `/code-review`, `/simplify`, `/security-review`.
-- **Перевірено:** ⭐99k, MIT, на приховані інструкції чисто (перевірка 18.08.2026).
+- **Перевірено:** ⭐99k, MIT, на приховані інструкції чисто (перевірка 18.08.2026). Ми з пака взяли лише `interview-me`: агент ставить питання по одному, поки не зрозуміє задачу.
+
+---
+
+## 🧪 Що ми ставили собі і що відхилили
+
+Коротко, з причиною. Відхилене не означає погане: у тебе може бути інший профіль роботи.
+
+| Інструмент | Вердикт | Чому |
+|---|---|---|
+| [taste-skill](https://github.com/Leonxlnx/taste-skill) (⭐91k) | ✅ ставимо для сайтів | інструкція для моделі, поки верстка пишеться. Вантажиться лише опис, не весь текст |
+| [impeccable](https://github.com/pbakaus/impeccable) (⭐72k) | ✅ з двома застереженнями | перевіряє дизайн кодом, без LLM. ⚠️ `npx impeccable install` тихо качає Chrome на ~700 МБ (лікується `PUPPETEER_SKIP_DOWNLOAD=1`). ⚠️ Інсталятор не ставить 4 бібліотеки, і детектор каже «чисто», хоча сліпий: доставити `npm i -D htmlparser2 css-select css-tree domutils` |
+| `interview-me` з [agent-skills](https://github.com/addyosmani/agent-skills) | ✅ | питання по одному до розуміння задачі. Корисно перед роботою з клієнтом |
+| [humanizer](https://github.com/blader/humanizer) (⭐53k) | ✅ як чек-лист | див. наш [АнтиAI-текст](guides/anti-ai-text.md) |
+| [Whisper](https://github.com/openai/whisper) + бот [Craig](https://craig.chat) | ✅ для дзвінків | Craig пише кожного учасника Discord окремою доріжкою, Whisper локально робить текст. Безкоштовно. ⚠️ Голосові **промпти** агенту диктувати обережно: пропущене «НЕ» перевертає задачу |
+| [RTK](https://github.com/rtk-ai/rtk) (⭐82k), автохук | ❌ | на наших замірах 0,25% економії, бо більшість команд іде через `ssh` |
+| [fail2ban](https://github.com/fail2ban/fail2ban) на сервері з Docker | ⚠️ лише для SSH | Docker публікує порти в обхід `INPUT`, тож бан у fail2ban і `ufw deny` **не закривають** порт контейнера. Правильно: порт на `127.0.0.1` + проксі (Caddy/nginx) попереду |
+| [crowdsec](https://github.com/crowdsecurity/crowdsec) | ❌ поки | розрахований на сотні різних IP, на одному VPS спершу закрий порти |
+| [gsap-skills](https://github.com/greensock/gsap-skills) | ❌ | у Next.js-сайті вже є framer-motion, дублювання
 
 ---
 
 ## 🧰 Від нас (Ігор)
+
+### Гайди
+- [АнтиAI-текст](guides/anti-ai-text.md): що прибрати з тексту, щоб він не звучав як написаний AI, і як вшити це в бота.
+- [Повторювані помилки → хуки](guides/mistakes-to-hooks.md): як перевести правило з пам'яті агента в хук Claude Code, який спрацьовує завжди.
+- [Економія токенів на замірах](guides/token-economy.md): старт сесії 122k → ~5k токенів, пастка стелі хука 10 000 символів, що ми перевірили і не взяли.
+- [Prompt Architect](guides/prompt-architect.md): специфікація, яка перетворює модель на автора промптів (EN).
 
 ### claude-context-kit
 [ihorkhamuliak/claude-context-kit](https://github.com/ihorkhamuliak/claude-context-kit)
@@ -159,6 +183,6 @@
 | [AWS Certified AI Practitioner](https://aws.amazon.com/certification/certified-ai-practitioner/) | 65 питань, 90 хв, діє 3 роки | $100 | вхідний рівень хмари + AI, добре читається в CV |
 | [Google AI Essentials](https://grow.google/ai-essentials/) (Coursera) | ~4 години | підписка Coursera | новачкам без технічної бази; для айтішника в CV важить мало |
 | [Deep Learning Specialization](https://www.deeplearning.ai/courses/deep-learning-specialization/) (DeepLearning.AI) | 5 курсів, ~127 годин | підписка Coursera | хто йде в ML-інженерію, потрібна математика |
-| ~~Azure AI Engineer Associate (AI-102)~~ | **знято 30.06.2026**, замість нього AI-103 (Azure AI App and Agent Developer) | | лише для стеку Microsoft |
+| Azure AI App and Agent Developer Associate (AI-103), Microsoft | прийшов на заміну AI-102, який зняли 30.06.2026 | див. Microsoft Learn | лише якщо працюєш у стеку Microsoft / Azure |
 
 Дані на 29.09.2026. Перед записом на іспит звір ціну на офіційній сторінці, вона залежить від країни.
