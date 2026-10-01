@@ -26,6 +26,7 @@ has tried or checked. Every entry has four lines: what it is, who it's for, when
 | skills for Claude Code | [🤖 Claude Code](#-claude-code) |
 | videos on skills and AGENTS.md | [🎥 Videos](#-videos-recommended-by-fomoles) |
 | what's worth installing, what isn't, and why | [🧪 What we installed and rejected](#-what-we-installed-and-what-we-rejected) |
+| what Focus members built and recommend | [👥 From members](#-from-members) |
 | token savings, anti-AI text, hooks, prompts | [🧰 From us](#-from-us-ihor) |
 | a certification for your CV | [🎓 Certifications](#-certifications) |
 
@@ -179,6 +180,26 @@ Short, with the reason. Rejected doesn't mean bad: your work may look different.
 | [fail2ban](https://github.com/fail2ban/fail2ban) on a server with Docker | ⚠️ SSH only | Docker publishes ports around `INPUT`, so a fail2ban ban or `ufw deny` does **not** close a container's port. Do this instead: bind the port to `127.0.0.1` and put a proxy (Caddy/nginx) in front |
 | [crowdsec](https://github.com/crowdsecurity/crowdsec) | ❌ for now | built for hundreds of different IPs; on a single VPS, close the ports first |
 | [gsap-skills](https://github.com/greensock/gsap-skills) | ❌ | our Next.js site already has framer-motion, it would duplicate it |
+
+---
+
+## 👥 From members
+
+Things Focus members built themselves or recommend from their own experience. We check the repo before adding it, but we haven't run everything.
+
+### pair-mcp (Daniil)
+[daniloko365/pair-mcp](https://github.com/daniloko365/pair-mcp)
+- **What:** a "council" of several models for Codex and Claude Code: the models discuss the task with each other instead of one model thinking alone. Works with any API key (OpenRouter, Anthropic), you pick the models and how many.
+- **Who it's for:** people on macOS (Apple Silicon) who want a second opinion from another model before a decision.
+- **When NOT to install:** it doesn't run on Windows or Linux. The prebuilt app isn't notarized by Apple, building from source is safer.
+- **Checked:** the author built it for himself, we haven't run it. MIT, built on [PAL MCP](https://github.com/BeehiveInnovations/pal-mcp-server), code grepped for hidden instructions and dangerous commands.
+
+### Jules + Gemini: vibe coding without subscriptions (C/M)
+[Jules](https://jules.google) by Google
+- **What:** a combo for saving tokens and subscriptions. Shape the idea and prompt in Gemini, pick the tools → create a repo → Jules builds the skeleton (structure, a basic landing page) → a top model finishes the hard backend, two or three models on a heavy project.
+- **Who it's for:** people who pay for tokens out of their own pocket.
+- **When you DON'T need it:** if you have a Claude or Cursor subscription and don't hit the limits.
+- **Checked:** a member's experience, we didn't measure it. Jules has a free tier with a daily task limit, check the current limit on the site.
 
 ---
 
