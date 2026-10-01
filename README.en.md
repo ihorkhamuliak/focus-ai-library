@@ -201,6 +201,21 @@ Things Focus members built themselves or recommend from their own experience. We
 - **When you DON'T need it:** if you have a Claude or Cursor subscription and don't hit the limits.
 - **Checked:** a member's experience, we didn't measure it. Jules has a free tier with a daily task limit, check the current limit on the site.
 
+### Prompt add-ons (Oleksii Muzyka)
+- **What:** short phrases to add at the end of a request for a better answer. The author himself says some are outdated, so each one has our verdict.
+- **Who it's for:** when the model just agrees with you, or the answer looks smooth but empty.
+
+| Phrase | Verdict | Why |
+|---|---|---|
+| "What would make this backfire?" | ✅ | a pre-mortem: the model looks for how the decision fails instead of agreeing |
+| "What questions should I be asking instead?" | ✅ | takes you outside the frame of your question, good at the start of a task |
+| "I have two options. Instead of telling me which is better, tell me what kind of person would choose each one." | ✅ | shows when each option is the right one |
+| "What's the contrarian view here?" | ✅ | counters agreeableness |
+| "Give me the version for beginners, then for experts" | ✅ for learning | two depths in one request |
+| "Assume I know nothing" | ⚠️ | works, but bloats the answer |
+| "Walk me through your reasoning" | ⚠️ outdated | reasoning models already think, and the reasoning they show isn't always the real one |
+| "After you respond, tell me the one thing you held back because you weren't sure I wanted to hear it." | ❌ | the model will invent something "held back" to satisfy the request |
+
 ---
 
 ## 🧰 From us (Ihor)
