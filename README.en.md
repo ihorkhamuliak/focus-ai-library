@@ -106,7 +106,7 @@ The last column shows what to take if you have a Telegram bot or n8n without log
 | 12 | Bot protection (captcha, form rate limit) | ✅ |
 | 13 | Parameterized database queries | ✅ |
 | 14 | Validate all input | ✅ |
-| 15 | Escape user content | |
+| 15 | Escape user content | ✅ |
 | 16 | Restrict file uploads | |
 | 17 | Trim API responses | |
 | 18 | Security headers | |
