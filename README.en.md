@@ -28,6 +28,8 @@ has tried or checked. Every entry has four lines: what it is, who it's for, when
 | what's worth installing, what isn't, and why | [🧪 What we installed and rejected](#-what-we-installed-and-what-we-rejected) |
 | what Focus members built and recommend | [👥 From members](#-from-members) |
 | token savings, anti-AI text, hooks, prompts | [🧰 From us](#-from-us-ihor) |
+| a day plan on the desktop and in Claude sessions | [🧰 From us](#-from-us-ihor): "Day plan" guide |
+| Obsidian plugins for notes | [👥 From members](#-from-members) |
 | a certification for your CV | [🎓 Certifications](#-certifications) |
 
 ## How to use it
@@ -216,6 +218,13 @@ Things Focus members built themselves or recommend from their own experience. We
 | "Walk me through your reasoning" | ⚠️ outdated | reasoning models already think, and the reasoning they show isn't always the real one |
 | "After you respond, tell me the one thing you held back because you weren't sure I wanted to hear it." | ❌ | the model will invent something "held back" to satisfy the request |
 
+### Obsidian plugins: Inline Annotations and Patina (Oleksii Muzyka)
+[Inline Annotations](https://github.com/cetrodk/obsidian-inline-annotations) · [Patina](https://github.com/israerusan/patina)
+- **What:** Inline Annotations attaches your own note to selected text, shown in a popup on click. Patina gives every note a staleness score (edits, opens, inbound links) and a review queue of what you haven't opened in a while, to resurface forgotten ideas.
+- **For whom:** people who keep many articles in their vault and add their own thoughts (Inline Annotations); people with a big vault where ideas get lost (Patina).
+- **When not to install:** Patina is very young (since July 2026, 0 stars), try it on a copy of your vault first.
+- **Checked:** both are in the official Obsidian plugin catalog, MIT, recent releases (Inline Annotations 1.0.2 on 2026-09-03, 8 stars; Patina 1.0.2 on 2026-07-25). The catalog marks both "not manually reviewed by Obsidian staff". We haven't installed them: our notes don't use Obsidian.
+
 ---
 
 ## 🧰 From us (Ihor)
@@ -225,6 +234,14 @@ Things Focus members built themselves or recommend from their own experience. We
 - [Recurring mistakes → hooks](guides/en/mistakes-to-hooks.md): how to move a rule from the agent's memory into a Claude Code hook that fires every time.
 - [Token savings, measured](guides/en/token-economy.md): session start 122k → ~5k tokens, the 10,000-character hook output cap, what we tested and didn't take.
 - [Prompt Architect](guides/prompt-architect.md): a spec that turns a model into a prompt writer.
+- [Day plan: Todoist + Claude Code + a widget](guides/en/day-plan-todoist.md): tasks in Todoist, context in notes, the plan on the desktop and at session start, a closed-task journal, 5 API traps.
+
+### todoist-plan
+[ihorkhamuliak/todoist-plan](https://github.com/ihorkhamuliak/todoist-plan)
+- **What:** a Todoist day plan in two places: a Rainmeter widget on the desktop and a short brief at the start of a Claude Code session; plus a closed-task journal in your notes.
+- **For whom:** people who use Claude Code daily and ask "what's the plan?" every morning.
+- **When you don't need it:** on a Mac (the widget is Windows only) or if your plan already lives in one place you see.
+- **Checked:** my working setup since 2026-10-04, tests on synthetic tasks, MIT. Details in the [guide](guides/en/day-plan-todoist.md).
 
 ### claude-context-kit
 [ihorkhamuliak/claude-context-kit](https://github.com/ihorkhamuliak/claude-context-kit)
