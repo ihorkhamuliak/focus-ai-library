@@ -29,6 +29,8 @@ has tried or checked. Every entry has four lines: what it is, who it's for, when
 | what Focus members built and recommend | [👥 From members](#-from-members) |
 | token savings, anti-AI text, hooks, prompts | [🧰 From us](#-from-us-ihor) |
 | a day plan on the desktop and in Claude sessions | [🧰 From us](#-from-us-ihor): "Day plan" guide |
+| voice instead of typing, an interview trainer in a foreign language | [🧰 From us](#-from-us-ihor): "Voice → text" guide |
+| a job-search assistant for Poland | [🧰 From us](#-from-us-ihor): ai-job-matcher |
 | Obsidian plugins for notes | [👥 From members](#-from-members) |
 | a certification for your CV | [🎓 Certifications](#-certifications) |
 
@@ -138,6 +140,9 @@ The last column shows what to take if you have a Telegram bot or n8n without log
 - **Don't install the whole pack:** it adds a hook that loads a meta-skill into EVERY session. About a quarter of the skills
   duplicate Claude Code's built-in `/code-review`, `/simplify`, `/security-review`.
 - **Checked:** ⭐99k, MIT, clean of hidden instructions (checked 18.08.2026). From the pack we took only `interview-me`: the agent asks one question at a time until it understands the task.
+- **`idea-refine` (recommended by Oleksii Muzyka):** raw idea → variations → assumption stress-test → a one-pager (problem,
+  direction, assumptions, MVP, "not doing"). Good for testing an idea before you start building. Take it on its own, without the pack:
+  the script only creates a `docs/ideas` folder, no network, clean of hidden instructions (⭐108k, checked 19.10.2026).
 
 ### Matt Pocock skills
 [mattpocock/skills](https://github.com/mattpocock/skills)
@@ -213,6 +218,7 @@ Things Focus members built themselves or recommend from their own experience. We
 | "What questions should I be asking instead?" | ✅ | takes you outside the frame of your question, good at the start of a task |
 | "I have two options. Instead of telling me which is better, tell me what kind of person would choose each one." | ✅ | shows when each option is the right one |
 | "What's the contrarian view here?" | ✅ | counters agreeableness |
+| Then: "Now give me the contrarian view to that contrarian view" | ✅ | the second step filters out objecting for its own sake, the answer comes out fuller and deeper |
 | "Give me the version for beginners, then for experts" | ✅ for learning | two depths in one request |
 | "Assume I know nothing" | ⚠️ | works, but bloats the answer |
 | "Walk me through your reasoning" | ⚠️ outdated | reasoning models already think, and the reasoning they show isn't always the real one |
@@ -235,6 +241,17 @@ Things Focus members built themselves or recommend from their own experience. We
 - [Token savings, measured](guides/en/token-economy.md): session start 122k → ~5k tokens, the 10,000-character hook output cap, what we tested and didn't take.
 - [Prompt Architect](guides/prompt-architect.md): a spec that turns a model into a prompt writer.
 - [Day plan: Todoist + Claude Code + a widget](guides/en/day-plan-todoist.md): tasks in Todoist, context in notes, the plan on the desktop and at session start, a closed-task journal, 5 API traps.
+- [Voice → text for Claude, locally, $0](guides/en/voice-local.md): an interview trainer in Polish or English and thought dumps into the chat, faster-whisper on CPU, 5 traps.
+
+### ai-job-matcher
+[ihorkhamuliak/ai-job-matcher](https://github.com/ihorkhamuliak/ai-job-matcher)
+- **What:** a personal job-search assistant: a code sieve (seniority, languages, pay, city), LLM scoring 1-10 against a bank
+  of your real experience, a Telegram digest, a one-page CV and cover letter built only from bank facts. The model was picked
+  by a test: Haiku 5.5 is ~12x cheaper than Sonnet and didn't lose a single job I actually applied to (11 of 11).
+- **Who for:** people job hunting in Poland and drowning in 10 boards, and anyone who wants to see "rules in code, judgment in the model" in practice.
+- **Skip it if:** you want ready-made auto-apply. The repo has no board adapters (most Polish boards forbid automated
+  collection in their terms), you plug in your own source.
+- **Checked:** my working bot since 10.2026, the core of the private version, 151 tests, a demo on made-up jobs, MIT.
 
 ### todoist-plan
 [ihorkhamuliak/todoist-plan](https://github.com/ihorkhamuliak/todoist-plan)

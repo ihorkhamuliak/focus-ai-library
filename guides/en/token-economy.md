@@ -43,5 +43,6 @@ Lesson: delivery is proven by the receiver. Start a new session and ask it to qu
 | New MCPs, skills, hooks | `/context` in an empty session | turn off what you don't need: every tool's description rides in every session |
 | Images | count by pixels (w×h/750), not by base64 length | extract text from PDFs as text, shrink screenshots |
 | Your bots on the API | the provider's Usage API, not your own counter | cache the shared prompt prefix, filter before calling the model |
+| The model for bulk scoring | a backtest: the new model rescores what the old one already scored | job bot: Haiku 5.5 instead of Sonnet, $0.00053 vs $0.0064 per job (~12x), 11 of 11 of my applications passed. Traps: Haiku thinks longer, 30 of 85 answers hit `max_tokens` 1024; the CV would have silently moved to the cheap model through a shared variable, so the CV model is now separate |
 
 🔴 **Don't cut where results get worse:** answer quality, checks and memory aren't worth a few cents.

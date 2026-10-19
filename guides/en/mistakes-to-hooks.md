@@ -24,6 +24,8 @@ at the moment of action; a hook does. Below is how we move mistakes from "memory
 | Editing n8n directly in the DB (`UPDATE workflow_entity`) without `workflow_history` | 2, one stayed hidden for 2 weeks | hook on the SQL text | block |
 | Code with `\n` via heredoc | 2 in a day, prod was down 7 hours | hook on heredoc with escapes | warning |
 | Reading a huge file in full | systematically | `PreToolUse` on `Read` without `offset`/`limit` for files > 100 KB | block |
+| Ready-to-send text sits mid-turn (before a question or a tool call) and gets lost in the chat | 12 "give me the text here" in a month | hook on `Stop`: asks to repeat the text at the bottom of the reply | asks to repeat |
+| Writing to Google Drive through a connector that can only read | repeated although the rule was already in memory | hook on the connector's write tools (create, update, copy, share, trash) + a hint on how to do it instead | block |
 | "All good" without checking that the measurement can see a failure | 3 in one session | not machine-recognizable | memory only |
 
 ## Know this up front
