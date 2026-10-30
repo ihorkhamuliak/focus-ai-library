@@ -31,6 +31,7 @@ has tried or checked. Every entry has four lines: what it is, who it's for, when
 | a day plan on the desktop and in Claude sessions | [🧰 From us](#-from-us-ihor): "Day plan" guide |
 | voice instead of typing, an interview trainer in a foreign language | [🧰 From us](#-from-us-ihor): "Voice → text" guide |
 | a job-search assistant for Poland | [🧰 From us](#-from-us-ihor): ai-job-matcher |
+| n8n runs something other than the editor shows | [🧰 From us](#-from-us-ihor): "n8n 2.x: what runs" |
 | Obsidian plugins for notes | [👥 From members](#-from-members) |
 | a certification for your CV | [🎓 Certifications](#-certifications) |
 
@@ -242,6 +243,7 @@ Things Focus members built themselves or recommend from their own experience. We
 - [Prompt Architect](guides/prompt-architect.md): a spec that turns a model into a prompt writer.
 - [Day plan: Todoist + Claude Code + a widget](guides/en/day-plan-todoist.md): tasks in Todoist, context in notes, the plan on the desktop and at session start, a closed-task journal, 5 API traps.
 - [Voice → text for Claude, locally, $0](guides/en/voice-local.md): an interview trainer in Polish or English and thought dumps into the chat, faster-whisper on CPU, 5 traps.
+- [n8n 2.x: what runs is not what the editor shows](guides/en/n8n-drift.md): why a database edit may not take effect, a 1-minute SQL check and a daily script with a canary.
 
 ### ai-job-matcher
 [ihorkhamuliak/ai-job-matcher](https://github.com/ihorkhamuliak/ai-job-matcher)
