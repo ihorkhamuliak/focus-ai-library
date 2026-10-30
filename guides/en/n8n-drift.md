@@ -29,7 +29,7 @@ An empty result is not proof yet. Test the query on a planted difference in a te
 
 ## The rule
 
-- Editing the database directly: both tables, then restart n8n and run a live test.
+- Editing the database directly: back up first (`pg_dump` of both tables), change both tables in one transaction, then restart n8n and run a live test.
 - Checking an edit: only `workflow_history` at `activeVersionId`, not `workflow_entity`.
 - A difference is not always a bug: an unpublished draft in the editor also shows up.
 

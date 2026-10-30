@@ -181,7 +181,7 @@ Short, with the reason. Rejected doesn't mean bad: your work may look different.
 | Tool | Verdict | Why |
 |---|---|---|
 | [taste-skill](https://github.com/Leonxlnx/taste-skill) (⭐91k) | ✅ we use it for websites | guides the model while the layout is being written. Only the description loads, not the whole text |
-| [impeccable](https://github.com/pbakaus/impeccable) (⭐72k) | ✅ with two warnings | checks design with code, no LLM. ⚠️ `npx impeccable install` silently downloads ~700 MB of Chrome (fix: `PUPPETEER_SKIP_DOWNLOAD=1`). ⚠️ The installer skips 4 libraries, and the detector reports "clean" while blind: add `npm i -D htmlparser2 css-select css-tree domutils` |
+| [impeccable](https://github.com/pbakaus/impeccable) (⭐72k) | ✅ with two warnings | checks design with code, no LLM. ⚠️ `npx impeccable install` silently downloads ~700 MB of Chrome (fix: `PUPPETEER_SKIP_DOWNLOAD=1`). ⚠️ The installer skips 4 libraries, and the detector reports "clean" while blind: add `npm i -D htmlparser2 css-select css-tree domutils`. ⚠️ These commands carry no version: pin yours, as the [review](guides/en/tools-review.md) advises |
 | `interview-me` from [agent-skills](https://github.com/addyosmani/agent-skills) | ✅ | one question at a time until the task is clear. Useful before client work |
 | [humanizer](https://github.com/blader/humanizer) (⭐53k) | ✅ as a checklist | see our [Anti-AI text](guides/en/anti-ai-text.md) |
 | [Whisper](https://github.com/openai/whisper) + the [Craig](https://craig.chat) bot | ✅ for calls | Craig records each Discord participant on a separate track, Whisper transcribes locally. Free. ⚠️ Be careful dictating **prompts** to an agent by voice: a dropped "NOT" flips the task |

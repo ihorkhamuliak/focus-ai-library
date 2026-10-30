@@ -185,7 +185,7 @@
 | Інструмент | Вердикт | Чому |
 |---|---|---|
 | [taste-skill](https://github.com/Leonxlnx/taste-skill) (⭐91k) | ✅ ставимо для сайтів | інструкція для моделі, поки верстка пишеться. Вантажиться лише опис, не весь текст |
-| [impeccable](https://github.com/pbakaus/impeccable) (⭐72k) | ✅ з двома застереженнями | перевіряє дизайн кодом, без LLM. ⚠️ `npx impeccable install` тихо качає Chrome на ~700 МБ (лікується `PUPPETEER_SKIP_DOWNLOAD=1`). ⚠️ Інсталятор не ставить 4 бібліотеки, і детектор каже «чисто», хоча сліпий: доставити `npm i -D htmlparser2 css-select css-tree domutils` |
+| [impeccable](https://github.com/pbakaus/impeccable) (⭐72k) | ✅ з двома застереженнями | перевіряє дизайн кодом, без LLM. ⚠️ `npx impeccable install` тихо качає Chrome на ~700 МБ (лікується `PUPPETEER_SKIP_DOWNLOAD=1`). ⚠️ Інсталятор не ставить 4 бібліотеки, і детектор каже «чисто», хоча сліпий: доставити `npm i -D htmlparser2 css-select css-tree domutils`. ⚠️ Команди тут без версій: закріпи свою, як радить [огляд](guides/tools-review.md) |
 | `interview-me` з [agent-skills](https://github.com/addyosmani/agent-skills) | ✅ | питання по одному до розуміння задачі. Корисно перед роботою з клієнтом |
 | [humanizer](https://github.com/blader/humanizer) (⭐53k) | ✅ як чек-лист | див. наш [АнтиAI-текст](guides/anti-ai-text.md) |
 | [Whisper](https://github.com/openai/whisper) + бот [Craig](https://craig.chat) | ✅ для дзвінків | Craig пише кожного учасника Discord окремою доріжкою, Whisper локально робить текст. Безкоштовно. ⚠️ Голосові **промпти** агенту диктувати обережно: пропущене «НЕ» перевертає задачу |

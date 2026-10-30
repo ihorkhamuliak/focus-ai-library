@@ -33,6 +33,7 @@ at the moment of action; a hook does. Below is how we move mistakes from "memory
 - **Off switches.** Each hook checks for a flag file (for example `~/.claude/bash-guard-off`): file exists = hook off,
   no restart needed. Without this, a broken hook will block your work in the middle of the night.
 - **Fail-open.** If the hook script crashes, the action is allowed. A bug in the guard doesn't stop the work.
+- **Not a security boundary.** A hook catches your repeat mistakes, not an attacker: the agent can create the flag file itself, and a hook crash lets the action through. A real boundary takes access rights and a sandbox.
 - **The hook reads the command text.** SQL sitting in a file on the server (`psql < f.sql`) is invisible to it.
 - **Substring matching = false positives.** Our first hook even blocked `echo "... Co-Authored-By"`.
   We narrowed it to a `git commit` call at the start of the command and added that case to the test.

@@ -25,7 +25,7 @@ Audio never leaves the laptop, no API key, the model runs on the laptop CPU.
    (a command that returns when a file appears) and wakes up on its own. No need to type "done".
 
 ```python
-# pip install faster-whisper sounddevice numpy ; ffmpeg isn't needed for the microphone
+# pip install faster-whisper sounddevice numpy ; pin the versions after installing (pip freeze) ; ffmpeg isn't needed for the microphone
 import sys, time, threading, subprocess
 from datetime import datetime
 from pathlib import Path

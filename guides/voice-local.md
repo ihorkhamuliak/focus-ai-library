@@ -24,7 +24,7 @@
    повертається, коли з'являється файл) і прокидається сам. Писати «готово» не треба.
 
 ```python
-# pip install faster-whisper sounddevice numpy ; ffmpeg не потрібен для мікрофона
+# pip install faster-whisper sounddevice numpy ; версії закріпи після встановлення (pip freeze) ; ffmpeg не потрібен для мікрофона
 import sys, time, threading, subprocess
 from datetime import datetime
 from pathlib import Path
