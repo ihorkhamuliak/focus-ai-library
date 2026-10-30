@@ -2,7 +2,7 @@
 
 **Українська** | [English](en/tools-review.md)
 
-Усе це прийшло з рілсів, відео і чатів за один день. Ми пройшли кожен пункт і в систему взяли лише кілька. Решта не обов'язково погана: вона або дублює те, що вже є, або потрібна під задачу, якої зараз нема.
+Усе це прийшло з рілсів, відео і чатів за один день. Ми пройшли кожен пункт і поставили 7, питаючи себе одне: чи стане робота з агентом кращою. Решта не обов'язково погана: вона або дублює те, що вже є, або потрібна під задачу, якої зараз нема.
 
 **Як читати вердикт:**
 - ✅ поставили собі
@@ -19,15 +19,15 @@
 | Що | Вердикт | Кому і коли | Застереження |
 |---|---|---|---|
 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | ✅ | аудит власного коду з окремою перевіркою кожної знахідки | багато агентів, тому дорого. Без пісочниці сам не запускає чужий код. Ми скопіювали на закріпленому коміті, без `npx` |
-| [obra/superpowers](https://github.com/obra/superpowers) | 📌 | хто хоче готовий процес «спека → план → TDD» | хук вантажить текст у кожну сесію, логотип за замовчуванням іде з їхнього сервера (є в README). Якщо процес уже є, бери окремий скіл |
-| [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 📌 | бібліотека ролей: читай 1-2 під задачу | сотні файлів, частина під китайські платформи. Ми взяли одну: Discovery Coach. Застосунок і інсталятор не ставили |
-| [aicodeking/leanrea](https://github.com/aicodeking/leanrea) | 📌 | розібрати, як влаштована програма. Це реверс-інжиніринг, а не клон сайту | заточений під macOS, бенчмарк авторський, один контриб'ютор. Розбирай лише те, що маєш право |
-| [latent-spaces/brag](https://github.com/latent-spaces/brag) | 📌 | коротке відео про свій проєкт для LinkedIn чи портфоліо. `brag-slim` це один файл | потрібні ffmpeg і час на рендер |
+| [obra/superpowers](https://github.com/obra/superpowers) | ✅ один скіл | хто хоче готовий процес «спека → план → TDD» | ми взяли лише `systematic-debugging`, без хука: хук вантажить текст у кожну сесію, логотип за замовчуванням іде з їхнього сервера (є в README) |
+| [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | ✅ дві ролі | бібліотека ролей: читай 1-2 під задачу | сотні файлів, частина під китайські платформи. Ми взяли Discovery Coach і Reality Checker, застосунок та інсталятор не ставили |
+| [aicodeking/leanrea](https://github.com/aicodeking/leanrea) | ✅ | розібрати, як влаштована програма. Це реверс-інжиніринг, а не клон сайту | це один текстовий файл без коду. Заточений під macOS, бенчмарк авторський. Розбирай лише те, що маєш право |
+| [latent-spaces/brag](https://github.com/latent-spaces/brag) | ✅ `brag-slim` | коротке відео про свій проєкт для LinkedIn чи портфоліо. Це один файл | потрібні ffmpeg і час на рендер. Відео ще не робили |
 | [Oldcircle/geo-sleuth](https://github.com/Oldcircle/geo-sleuth) | 📌 | знайти місце зйомки за фото | лише свої фото: ця сама техніка знаходить, де живе людина |
 | [unclebob/swarm-forge](https://github.com/unclebob/swarm-forge) | 📌 ідея | варто вкрасти думку: QA перевіряє незалежно від автора коду | `zsh` + `tmux`, не для Windows, шість агентів, у репо нема ліцензії. Автор сам попереджає: токен SWARM купувати не треба |
 | [google-research/harness2](https://github.com/google-research/harness2) | 📌 ідея | дослідникам: агент покращує власну обв'язку на задачі | Linux, Vertex AI, мережа без обмежень, не офіційний продукт Google |
 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | ❌ | | величезна надбудова, старт через `@latest`, моди працюють із правами акаунта |
-| [affaan-m/ECC](https://github.com/affaan-m/ECC) | ❌ | | 71 агент, 314 скілів, хуки. Лягає поверх твоєї системи, а не поруч із нею |
+| [affaan-m/ECC](https://github.com/affaan-m/ECC) | ❌ | | 71 агент, 314 скілів, хуки. Лягає поверх твоєї системи, а не поруч із нею. Сканер AgentShield ми пробували один раз: 4 «критичні» виявились відсутністю потрібних фраз у файлі, а не проблемою |
 | [morluto/rea](https://github.com/morluto/rea) | ❌ | | 207 інструментів MCP. Якщо реверс справді потрібен, спершу `leanrea` |
 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | ❌ | | дублює [taste-skill і impeccable](../README.md#-що-ми-ставили-собі-і-що-відхилили), які вже стоять |
 
@@ -35,7 +35,7 @@
 
 | Що | Вердикт | Кому і коли | Застереження |
 |---|---|---|---|
-| [Playwright](https://github.com/microsoft/playwright-mcp) | 📌 | керувати браузером і тестувати сайт | сам README радить кодинг-агентам CLI зі скілами замість MCP: так менше токенів |
+| [Playwright CLI](https://github.com/microsoft/playwright-cli) | ✅ | керувати браузером, тестувати сайт, брати сторінку повним текстом | сам Microsoft радить кодинг-агентам CLI зі скілами замість MCP: так менше токенів. Можна взяти браузер Edge, що вже стоїть |
 | [Firecrawl](https://docs.firecrawl.dev/mcp-server) | 📌 | сторінка в чистий текст | [1 000 кредитів на місяць](https://www.firecrawl.dev/pricing) безкоштовно |
 | [PostHog](https://posthog.com/docs/model-context-protocol) | 📌 | коли є продукт із користувачами | підключення безкоштовне, але частина інструментів платна |
 | [Perplexity](https://docs.perplexity.ai/getting-started/pricing) | ❌ | | платний за запит, а пошук у Claude Code вже є |

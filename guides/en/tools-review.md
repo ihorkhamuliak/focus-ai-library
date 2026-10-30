@@ -2,7 +2,7 @@
 
 [Українська](../tools-review.md) | **English**
 
-All of this came from reels, videos and chats in a single day. We went through every item and took only a few into our system. The rest isn't necessarily bad: it either duplicates what we already have or fits a task we don't have right now.
+All of this came from reels, videos and chats in a single day. We went through every item and installed 7, asking one thing: does it make working with an agent better. The rest isn't necessarily bad: it either duplicates what we already have or fits a task we don't have right now.
 
 **How to read the verdicts:**
 - ✅ installed for ourselves
@@ -19,15 +19,15 @@ All of this came from reels, videos and chats in a single day. We went through e
 | What | Verdict | For whom and when | Caveats |
 |---|---|---|---|
 | [cloudflare/security-audit-skill](https://github.com/cloudflare/security-audit-skill) | ✅ | auditing your own code, with each finding checked separately | many agents, so expensive. Without a sandbox it won't run target code. We copied it at a pinned commit, no `npx` |
-| [obra/superpowers](https://github.com/obra/superpowers) | 📌 | if you want a ready "spec → plan → TDD" process | a hook loads text into every session, and the logo loads from their server by default (stated in the README). If you already have a process, take one skill |
-| [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | 📌 | a library of roles: read 1-2 for your task | hundreds of files, some for Chinese platforms. We took one: Discovery Coach. We did not use the app or the installer |
-| [aicodeking/leanrea](https://github.com/aicodeking/leanrea) | 📌 | understanding how a program works. This is reverse engineering, not site cloning | built around macOS, the benchmark is the author's own, one contributor. Only analyze what you have the right to |
-| [latent-spaces/brag](https://github.com/latent-spaces/brag) | 📌 | a short video about your project for LinkedIn or a portfolio. `brag-slim` is a single file | needs ffmpeg and render time |
+| [obra/superpowers](https://github.com/obra/superpowers) | ✅ one skill | if you want a ready "spec → plan → TDD" process | we took only `systematic-debugging`, no hook: the hook loads text into every session, and the logo loads from their server by default (stated in the README) |
+| [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) | ✅ two roles | a library of roles: read 1-2 for your task | hundreds of files, some for Chinese platforms. We took Discovery Coach and Reality Checker, and skipped the app and the installer |
+| [aicodeking/leanrea](https://github.com/aicodeking/leanrea) | ✅ | understanding how a program works. This is reverse engineering, not site cloning | a single text file, no code. Built around macOS, the benchmark is the author's own. Only analyze what you have the right to |
+| [latent-spaces/brag](https://github.com/latent-spaces/brag) | ✅ `brag-slim` | a short video about your project for LinkedIn or a portfolio. It's a single file | needs ffmpeg and render time. We haven't made a video yet |
 | [Oldcircle/geo-sleuth](https://github.com/Oldcircle/geo-sleuth) | 📌 | finding where a photo was taken | your own photos only: the same technique finds where a person lives |
 | [unclebob/swarm-forge](https://github.com/unclebob/swarm-forge) | 📌 idea | worth stealing the thought: QA verifies independently of the code's author | `zsh` + `tmux`, not for Windows, six agents, no license in the repo. The author himself warns not to buy any SWARM token |
 | [google-research/harness2](https://github.com/google-research/harness2) | 📌 idea | for researchers: an agent improves its own harness on a task | Linux, Vertex AI, unrestricted network, not an official Google product |
 | [ruvnet/ruflo](https://github.com/ruvnet/ruflo) | ❌ | | a huge layer on top, starts via `@latest`, mods run with your account's permissions |
-| [affaan-m/ECC](https://github.com/affaan-m/ECC) | ❌ | | 71 agents, 314 skills, hooks. It lands on top of your system, not next to it |
+| [affaan-m/ECC](https://github.com/affaan-m/ECC) | ❌ | | 71 agents, 314 skills, hooks. It lands on top of your system, not next to it. We tried the AgentShield scanner once: 4 "critical" findings turned out to be missing phrases in a file, not real problems |
 | [morluto/rea](https://github.com/morluto/rea) | ❌ | | 207 MCP tools. If you really need reverse engineering, try `leanrea` first |
 | [nextlevelbuilder/ui-ux-pro-max-skill](https://github.com/nextlevelbuilder/ui-ux-pro-max-skill) | ❌ | | duplicates [taste-skill and impeccable](../../README.en.md#-what-we-installed-and-what-we-rejected), which we already run |
 
@@ -35,7 +35,7 @@ All of this came from reels, videos and chats in a single day. We went through e
 
 | What | Verdict | For whom and when | Caveats |
 |---|---|---|---|
-| [Playwright](https://github.com/microsoft/playwright-mcp) | 📌 | driving a browser and testing a site | its own README recommends CLI plus skills over MCP for coding agents: fewer tokens |
+| [Playwright CLI](https://github.com/microsoft/playwright-cli) | ✅ | driving a browser, testing a site, getting a page as full text | Microsoft itself recommends CLI plus skills over MCP for coding agents: fewer tokens. It can use the Edge you already have |
 | [Firecrawl](https://docs.firecrawl.dev/mcp-server) | 📌 | turning a page into clean text | [1,000 credits a month](https://www.firecrawl.dev/pricing) for free |
 | [PostHog](https://posthog.com/docs/model-context-protocol) | 📌 | once you have a product with users | connecting is free, some tools are billed |
 | [Perplexity](https://docs.perplexity.ai/getting-started/pricing) | ❌ | | paid per request, and Claude Code already has search |

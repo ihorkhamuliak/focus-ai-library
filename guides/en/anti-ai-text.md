@@ -44,7 +44,7 @@ Word choice is easy to clean up, but structure gives AI away even after edits. [
 | The author comes out clean | Show your own miss or doubt | 59% / 38% |
 | Ignores the reader | One direct address where it feels natural | 28% / 7% |
 
-🔴 **Don't invent details for this.** No real quote or name means a hole in the draft is better. We compared two prompts of a post generator blind: the ending rule cut a stated moral from 5 of 5 posts to 3 of 5, but invented stories stayed in both versions. The sample is small, so treat it as a hint, not proof.
+🔴 **Don't invent details for this.** No real quote or name means a hole in the draft is better. We compared two prompts of a post generator blind: the ending rule cut a stated moral from 4 of 5 posts to 2 of 5. It does not cure invented scenes: those need their own ban in the prompt. The sample is small, so treat it as a hint, not proof.
 
 ## How to build it into your work
 
