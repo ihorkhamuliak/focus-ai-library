@@ -26,6 +26,7 @@ has tried or checked. Every entry has four lines: what it is, who it's for, when
 | skills for Claude Code | [🤖 Claude Code](#-claude-code) |
 | videos on skills and AGENTS.md | [🎥 Videos](#-videos-recommended-by-fomoles) |
 | what's worth installing, what isn't, and why | [🧪 What we installed and rejected](#-what-we-installed-and-what-we-rejected) |
+| 47 tools from reels: skills, connectors, scrapers, platforms, learning | [Review of 47 tools](guides/en/tools-review.md) |
 | what Focus members built and recommend | [👥 From members](#-from-members) |
 | token savings, anti-AI text, hooks, prompts | [🧰 From us](#-from-us-ihor) |
 | a day plan on the desktop and in Claude sessions | [🧰 From us](#-from-us-ihor): "Day plan" guide |
@@ -187,6 +188,7 @@ Short, with the reason. Rejected doesn't mean bad: your work may look different.
 | [RTK](https://github.com/rtk-ai/rtk) (⭐82k), auto-hook | ❌ | 0.25% savings on our measurements, because most of our commands go through `ssh` |
 | [fail2ban](https://github.com/fail2ban/fail2ban) on a server with Docker | ⚠️ SSH only | Docker publishes ports around `INPUT`, so a fail2ban ban or `ufw deny` does **not** close a container's port. Do this instead: bind the port to `127.0.0.1` and put a proxy (Caddy/nginx) in front |
 | [crowdsec](https://github.com/crowdsecurity/crowdsec) | ❌ for now | built for hundreds of different IPs; on a single VPS, close the ports first |
+| [security-audit-skill](https://github.com/cloudflare/security-audit-skill) (Cloudflare) | ✅ | auditing your own code, a separate agent verifies each finding. Copied at a pinned commit, heavy on tokens. The other 46 items: [review](guides/en/tools-review.md) |
 | [gsap-skills](https://github.com/greensock/gsap-skills) | ❌ | our Next.js site already has framer-motion, it would duplicate it |
 
 ---
@@ -291,6 +293,8 @@ Things Focus members built themselves or recommend from their own experience. We
 | [GitHub Foundations](https://learn.microsoft.com/en-us/credentials/certifications/github-foundations/) | 100 min, valid 3 years | $99, **free for students** via the GitHub Student Developer Pack | anyone who shows code to an employer |
 | [AWS Certified AI Practitioner](https://aws.amazon.com/certification/certified-ai-practitioner/) | 65 questions, 90 min, valid 3 years | $100 | entry level cloud + AI, reads well on a CV |
 | [Google AI Essentials](https://grow.google/ai-essentials/) (Coursera) | ~4 hours | Coursera subscription | beginners without a technical background; carries little weight on a developer's CV |
+| [HubSpot Digital Marketing](https://academy.hubspot.com/) | ~3-5 hours | free | freelancers: finding clients online, not about AI |
+| [IBM SkillsBuild: AI Fundamentals](https://skillsbuild.org/) | 10+ hours, Credly badge | free | entry level, a base for those new to AI |
 | [Deep Learning Specialization](https://www.deeplearning.ai/courses/deep-learning-specialization/) (DeepLearning.AI) | 5 courses, ~127 hours | Coursera subscription | people heading into ML engineering; needs math |
 | Azure AI App and Agent Developer Associate (AI-103), Microsoft | replaced AI-102, which was retired 30.06.2026 | see Microsoft Learn | only if you work in the Microsoft / Azure stack |
 
