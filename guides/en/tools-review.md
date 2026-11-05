@@ -4,6 +4,8 @@
 
 All of this came from reels, videos and chats in a single day. We went through every item and installed 7, asking one thing: does it make working with an agent better. The rest isn't necessarily bad: it either duplicates what we already have or fits a task we don't have right now.
 
+**This is our experience, not a recommendation.** We tested on our own setup as of 30.10.2026. Check things yourself before installing: you are responsible for what runs on your computer.
+
 **How to read the verdicts:**
 - ✅ installed for ourselves
 - 📌 useful for a specific task, don't install ahead of time
